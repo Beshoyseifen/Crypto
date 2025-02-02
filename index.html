@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinSeer</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #f1c40f;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .logo {
+            margin-top: 50px;
+            width: 300px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .logo:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 15px rgba(241, 196, 15, 0.8));
+        }
+        .container {
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #f1c40f;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #bfbfbf;
+        }
+        .principles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .principle-card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .principle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+        .principle-card img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+        .hover-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.2) 10%, transparent 50%);
+            transition: transform 0.1s, opacity 0.3s;
+            opacity: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="hover-effect"></div>
+    <img src="coinseer.jpg" alt="CoinSeer Logo" class="logo">
+    <div class="container">
+        <h1>Welcome to CoinSeer</h1>
+        <p>Your ultimate crypto insights and analysis platform.</p>
+    </div>
+
+    <!-- COIN SEER Principles Section -->
+    <h1>COIN SEER PRINCIPLES</h1>
+    <div class="principles">
+        <div class="principle-card">
+            <img src="predict.jpeg" alt="Icon 1">
+            <h2>The Future of Crypto Predictions</h2>
+            <p>- Predict trends, detect risks, and optimize trades <br>
+               - Smarter decisions, better profits
+            </p>
+        </div>
+
+        <div class="principle-card">
+            <img src="AI.avif" alt="Icon 2">
+            <h2><strong>Powered by AI</strong></h2>
+            <p>AI-powered insights to help you stay ahead in the crypto market.</p>
+        </div>
+        <div class="principle-card">
+            <img src="pmpfn.jpg" alt="Icon 3">
+            <h2><strong>Tokenization</strong></h2>
+            <p>$CS coming soon</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("mousemove", function(event) {
+            const effect = document.querySelector(".hover-effect");
+            effect.style.transform = `translate(${event.clientX - window.innerWidth / 2}px, ${event.clientY - window.innerHeight / 2}px) scale(1.5)`;
+            effect.style.opacity = "1";
+        });
+
+        document.addEventListener("mouseleave", function() {
+            const effect = document.querySelector(".hover-effect");
+            effect.style.opacity = "0";
+        });
+    </script>
+</body>
+</html>
